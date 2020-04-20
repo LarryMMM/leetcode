@@ -26,7 +26,7 @@ class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int,int> map;
-        stack<int> monoStack;
+        stack<int> monoStack; //单调栈
         for(int num : nums2){
             while(!monoStack.empty() && monoStack.top()<num){
                 map[monoStack.top()]=num;
